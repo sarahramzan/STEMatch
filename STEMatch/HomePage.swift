@@ -24,7 +24,7 @@ struct HomePage: View {
                         HStack{
                             Spacer()
                                 .frame(width: 25.0)
-                            Image("kode with klossy logo")
+                            Image("icon")
                                 .resizable(resizingMode: .stretch)
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 120.0, height: 120.0)

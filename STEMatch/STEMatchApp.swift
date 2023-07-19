@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+var startAge = 0;
+var endAge = 0;
+
 @main
 struct STEMatchApp: App {
     var body: some Scene {

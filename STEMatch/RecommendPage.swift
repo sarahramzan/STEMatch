@@ -6,20 +6,222 @@
 //
 
 import SwiftUI
-
+var sciCount = true
+var techCount = true
+var engCount = true
+var artsCount = true
+var mathCount = true
 struct RecommendPage: View {
+    @State var subjectsSelected = ""
     var body: some View {
         NavigationStack{
             ZStack{
                 Color("raisin black")
-                VStack{
-                    Text("Recommend")
-                        .foregroundColor(Color.white)
+                ScrollView {
+                    VStack{
+                        Spacer()
+                            .frame(height: 50.0)
+                        Text("STEMatch")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                        Spacer()
+                            .frame(height: 30.0)
+                        VStack {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 20)
+                                    .frame(width: 300.0, height: 65.0)
+                                    .foregroundColor(Color("ruddy blue"))
+                                
+                                Text("RECOMMEND")
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.white)
+                            }
+                            Spacer()
+                                .frame(height: 45.0)
+                            
+                            TextField("Organization Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .frame(width: 250.0, height: 50.0)
+                            
+                                .padding(.horizontal)
+                                .background(Color("beige"))
+                            
+                            Spacer()
+                                .frame(height: 30.0)
+                            // To be filled in as a drop down
+                            
+                            TextField("Opportunity Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .frame(width: 250.0, height: 50.0)
+                            
+                                .padding(.horizontal)
+                                .background(Color("beige"))
+                            
+                            Spacer()
+                                .frame(height: 30.0)
+                            
+                            TextField("Location(s)", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .frame(width: 250.0, height: 50.0)
+                            
+                                .padding(.horizontal)
+                                .background(Color("beige"))
+                            
+                            Spacer()
+                                .frame(height: 30.0)
+                            
+                            
+                            Text("AGE RANGE")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                            HStack {
+                                TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 50.0)
+                                    .frame(height: 40.0)
+                                    .foregroundColor(Color.black)
+                                
+                                
+                                    .padding(.horizontal)
+                                    .background(Color("beige"))
+                                
+                                Text(" - ")
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("beige"))
+                                
+                                TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 50.0)
+                                    .frame(height: 40.0)
+                                    .foregroundColor(Color.black)
+                                
+                                    .padding(.horizontal)
+                                    .background(Color("beige"))
+                            }
+                            
+                            
+                        }
+                        Spacer()
+                            .frame(height: 30.0)
+                        
+                        Text("SUBJECTS")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                        
+                        
+                        Menu("- \(subjectsSelected) -") {
+                            
+                            Button("Science") {
+                                if (sciCount){
+                                    subjectsSelected = "\(subjectsSelected) science, "
+                                    sciCount = false
+                                }
+                            }
+                            
+                            Button("Tech") {
+                                if (techCount){
+                                    subjectsSelected = "\(subjectsSelected) tech, "
+                                    techCount = false
+                                }
+                            }
+                            
+                            Button("Engineering") {
+                                if (engCount){
+                                    subjectsSelected = "\(subjectsSelected) engineering, "
+                                    engCount = false
+                                }
+                            }
+                            
+                            Button("Arts") {
+                                if (artsCount){
+                                    subjectsSelected = "\(subjectsSelected) arts, "
+                                    artsCount = false
+                                }
+                            }
+                            
+                            Button("Math") {
+                                if (mathCount){
+                                    subjectsSelected = "\(subjectsSelected) math, "
+                                    mathCount = false
+                                }
+                            }
+                            Button("Clear All") {
+                                subjectsSelected = ""
+                                
+                            }
+                        }
+                        .fontWeight(/*@START_MENU_TOKEN@*/.medium/*@END_MENU_TOKEN@*/)
+                        .frame(width: 250.0, height: 50.0)
+                        .font(.title2)
+                        .padding(.horizontal)
+                        
+                        .background(Color("beige"))
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                        
+                        
+                        Text("PRICE")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                        HStack {
+                            TextField("     $", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .frame(width: 50.0)
+                                .frame(height: 40.0)
+                                .foregroundColor(Color.black)
+                            
+                                .padding(.horizontal)
+                                .background(Color("beige"))
+                            
+                            Text(" - ")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("beige"))
+                            
+                            TextField("  $$$", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                .frame(width: 50.0)
+                                .frame(height: 40.0)
+                                .foregroundColor(Color.black)
+                            
+                                .padding(.horizontal)
+                                .background(Color("beige"))
+                        }
+                        Spacer()
+                            .frame(height: 55.0)
+                        
+                        
+                        
+                        
+//                        NavigationLink(destination: ResultsPage()) {
+//                            ZStack{
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .frame(width: 200.0, height: 60.0)
+//                                    .foregroundColor(/*@START_MENU_TOKEN@*/Color("ruddy blue")/*@END_MENU_TOKEN@*/)
+//
+//                                Text("Submit")
+//                                    .font(.title)
+//                                    .fontWeight(.bold)
+//                                    .foregroundColor(Color.white)
+//
+//                            }
+//                        }
+                    }
+                    NavigationLink(destination: HomePage()) {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 200.0, height: 60.0)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/Color("ruddy blue")/*@END_MENU_TOKEN@*/)
+                            
+                            Text("Submit")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                            
+                        }
+                    }
                 }
             }
             .ignoresSafeArea()
         }
-
     }
 }
 

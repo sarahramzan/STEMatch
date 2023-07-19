@@ -13,8 +13,13 @@ struct ReviewPage: View {
             ZStack{
                 Color("raisin black")
                 VStack{
-                    Text("Review")
+                    Spacer()
+                        .frame(height: 60.0)
+                    Text("STEMatch")
+                        .font(.title)
+                        .fontWeight(.bold)
                         .foregroundColor(Color.white)
+                
                 }
             }
             .ignoresSafeArea()

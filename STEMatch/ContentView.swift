@@ -20,19 +20,17 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                     
-                    TextField("username", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Username", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                         .frame(height: 40.0)
                     
-                        .border(Color.white, width: 1)
                         .padding(.horizontal)
-                        .background(Color.white)
+                        .background(Color("beige"))
                     
-                    TextField("password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Password", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                         .frame(height: 40.0)
                     
-                        .border(Color.white, width: 1)
                         .padding(.horizontal)
-                        .background(Color.white)
+                        .background(Color("beige"))
                     Spacer()
                         .frame(height: 30.0)
                     
@@ -59,7 +57,7 @@ struct ContentView: View {
                         .frame(height: 20.0)
                     
                     NavigationLink(destination: FindPage()) {
-                        Text("sign in as guest")
+                        Text("Sign in as guest")
                             .underline()
                     }
 
