@@ -16,8 +16,10 @@ struct FindPage: View {
     @State var location = "Select Location"
     var body: some View {
         NavigationStack{
-            ZStack{
             
+            ZStack{
+                
+
                 Color("raisin black")
                 VStack{
                    
@@ -41,7 +43,6 @@ struct FindPage: View {
                         Spacer()
                             .frame(height: 45.0)
                         
-                        // To be filled in as a drop down
                         
                         Menu(location) {
                             Button("Seattle") {
@@ -61,7 +62,7 @@ struct FindPage: View {
                             }
                             
                             Button("Miami") {
-                                location = "Miami"
+                                location = "Seattle"
                             }
                             Button("International") {
                                 location = "International"
@@ -216,7 +217,7 @@ struct FindPage: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                                     
-                                    
+                        
                             }
                         }
 

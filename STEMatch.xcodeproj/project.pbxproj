@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD155AA52A688E480006C227 /* PostRevPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD155AA42A688E480006C227 /* PostRevPage.swift */; };
 		BD482CFB2A685BD800F74CA4 /* ResultsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD482CFA2A685BD800F74CA4 /* ResultsPage.swift */; };
 		BD4EC5932A65F67E0028A494 /* STEMatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EC5922A65F67E0028A494 /* STEMatchApp.swift */; };
 		BD4EC5952A65F67E0028A494 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EC5942A65F67E0028A494 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD155AA42A688E480006C227 /* PostRevPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRevPage.swift; sourceTree = "<group>"; };
 		BD482CFA2A685BD800F74CA4 /* ResultsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPage.swift; sourceTree = "<group>"; };
 		BD4EC58F2A65F67E0028A494 /* STEMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STEMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4EC5922A65F67E0028A494 /* STEMatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STEMatchApp.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				BD4EC5942A65F67E0028A494 /* ContentView.swift */,
 				BD6648EF2A67425600DADCA3 /* HomePage.swift */,
 				BD6648F32A67462400DADCA3 /* ReviewPage.swift */,
+				BD155AA42A688E480006C227 /* PostRevPage.swift */,
 				BD6648F12A67460D00DADCA3 /* RecommendPage.swift */,
 				BD6648ED2A67421500DADCA3 /* FindPage.swift */,
 				BD482CFA2A685BD800F74CA4 /* ResultsPage.swift */,
@@ -156,6 +159,7 @@
 				BD6648F42A67462400DADCA3 /* ReviewPage.swift in Sources */,
 				BD6648F22A67460D00DADCA3 /* RecommendPage.swift in Sources */,
 				BD6648EE2A67421500DADCA3 /* FindPage.swift in Sources */,
+				BD155AA52A688E480006C227 /* PostRevPage.swift in Sources */,
 				BD4EC5952A65F67E0028A494 /* ContentView.swift in Sources */,
 				BD4EC5932A65F67E0028A494 /* STEMatchApp.swift in Sources */,
 				BD6648F02A67425600DADCA3 /* HomePage.swift in Sources */,

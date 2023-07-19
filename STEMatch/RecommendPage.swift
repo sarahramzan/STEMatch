@@ -25,6 +25,8 @@ struct RecommendPage: View {
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
+                            .frame(width: 350.0)
+                            
                         Spacer()
                             .frame(height: 30.0)
                         VStack {
@@ -205,7 +207,7 @@ struct RecommendPage: View {
 //                            }
 //                        }
                     }
-                    NavigationLink(destination: HomePage()) {
+                    NavigationLink(destination: ResultsPage()) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 200.0, height: 60.0)
