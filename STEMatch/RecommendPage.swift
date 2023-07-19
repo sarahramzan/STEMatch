@@ -9,7 +9,17 @@ import SwiftUI
 
 struct RecommendPage: View {
     var body: some View {
-        Text("Recommend Page!")
+        NavigationStack{
+            ZStack{
+                Color("raisin black")
+                VStack{
+                    Text("Recommend")
+                        .foregroundColor(Color.white)
+                }
+            }
+            .ignoresSafeArea()
+        }
+
     }
 }
 

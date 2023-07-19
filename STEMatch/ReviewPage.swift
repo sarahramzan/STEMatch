@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ReviewPage: View {
     var body: some View {
-        Text("Review Page!")
+        NavigationStack{
+            ZStack{
+                Color("raisin black")
+                VStack{
+                    Text("Review")
+                        .foregroundColor(Color.white)
+                }
+            }
+            .ignoresSafeArea()
+        }
     }
 }
 

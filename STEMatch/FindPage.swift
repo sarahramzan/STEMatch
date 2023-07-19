@@ -10,9 +10,15 @@ import SwiftUI
 struct FindPage: View {
     var body: some View {
         NavigationStack{
-            Text("Find Page")
+            ZStack{
+                Color("raisin black")
+                VStack{
+                    Text("Find")
+                        .foregroundColor(Color.white)
+                }
+            }
+            .ignoresSafeArea()
         }
-        
     }
 }
 
