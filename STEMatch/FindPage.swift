@@ -14,6 +14,12 @@ var mathCount1 = true
 struct FindPage: View {
     @State var subjectsSelected1 = ""
     @State var location = "Select Location"
+   
+    @State var userAgeTemp = ""
+//    var userSubjects: [String] = []
+//    var userStartPrice = 0
+//    var userEndPrice = 0
+    
     var body: some View {
         NavigationStack{
             
@@ -47,25 +53,31 @@ struct FindPage: View {
                         Menu(location) {
                             Button("Seattle") {
                                 location = "Seattle"
+                                userLocation = "Seattle"
                             }
                               
                             Button("Los Angeles") {
                                 location = "Los Angeles"
+                                userLocation = "Los Angeles"
                             }
                             
                             Button("Chicago") {
                                 location = "Chicago"
+                                userLocation = "Chicago"
                             }
                             
                             Button("NYC") {
                                 location = "NYC"
+                                userLocation = "NYC"
                             }
                             
                             Button("Miami") {
-                                location = "Seattle"
+                                location = "Miami"
+                                userLocation = "Miami"
                             }
                             Button("International") {
                                 location = "International"
+                                userLocation = "International"
                             }
                         }
                         
@@ -80,32 +92,23 @@ struct FindPage: View {
                         Spacer()
                             .frame(height: 30.0)
                         
-                        Text("AGE RANGE")
+                        Text("AGE")
+                        
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
+                        
+                        // variable to look at
                         HStack {
-                            TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                                .frame(width: 50.0)
-                                .frame(height: 40.0)
-                                .foregroundColor(Color.black)
                             
-                                
-                                .padding(.horizontal)
-                                .background(Color("beige"))
-                            
-                            Text(" - ")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("beige"))
-                            
-                            TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("  AGE", text: $userAgeTemp)
                                 .frame(width: 50.0)
                                 .frame(height: 40.0)
                                 .foregroundColor(Color.black)
                             
                                 .padding(.horizontal)
                                 .background(Color("beige"))
+                            
                         }
                         Spacer()
                             .frame(height: 40.0)
@@ -127,6 +130,7 @@ struct FindPage: View {
                                 if (sciCount1){
                                     subjectsSelected1 = "\(subjectsSelected1) science, "
                                     sciCount1 = false
+                                    userSubjects.append("science")
                                 }
                             }
                             
@@ -134,6 +138,7 @@ struct FindPage: View {
                                 if (techCount1){
                                     subjectsSelected1 = "\(subjectsSelected1) tech, "
                                     techCount1 = false
+                                    userSubjects.append("technology")
                                 }
                             }
                             
@@ -141,6 +146,7 @@ struct FindPage: View {
                                 if (engCount1){
                                     subjectsSelected1 = "\(subjectsSelected1) engineering, "
                                     engCount1 = false
+                                    userSubjects.append("engineering")
                                 }
                             }
                             
@@ -148,6 +154,7 @@ struct FindPage: View {
                                 if (artsCount1){
                                     subjectsSelected1 = "\(subjectsSelected1) arts, "
                                     artsCount1 = false
+                                    userSubjects.append("arts")
                                 }
                             }
                             
@@ -155,10 +162,12 @@ struct FindPage: View {
                                 if (mathCount1){
                                     subjectsSelected1 = "\(subjectsSelected1) math, "
                                     mathCount1 = false
+                                    userSubjects.append("math")
                                 }
                             }
                             Button("Clear All") {
                                 subjectsSelected1 = ""
+                                userSubjects.removeAll()
                                 
                             }
                         }
@@ -169,9 +178,6 @@ struct FindPage: View {
                         
                         .background(Color("beige"))
                         .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
-                       
-                    
-                       
                         
                     }
                     Text("PRICE")
@@ -203,8 +209,8 @@ struct FindPage: View {
                     Spacer()
                         .frame(height: 55.0)
                     
-                        
-                        NavigationLink(destination: ResultsPage()) {
+//                    NavigationButton(destination: NextView(mhzValue: self.$mhzValue)){...}
+                    NavigationLink(destination: ResultsPage()) {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
                                     .frame(width: 200.0, height: 60.0)
@@ -217,9 +223,11 @@ struct FindPage: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color.white)
                                     
-                        
+                                                    
                             }
+                            
                         }
+                    
 
                        
                     

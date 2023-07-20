@@ -207,7 +207,7 @@ struct RecommendPage: View {
 //                            }
 //                        }
                     }
-                    NavigationLink(destination: ResultsPage()) {
+                    NavigationLink(destination: PostRecPage()) {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 200.0, height: 60.0)

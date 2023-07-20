@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-var startAge = 0;
-var endAge = 0;
+var userLocation = ""
+var userAge = ""
+var userSubjects: [String] = []
+var userStartPrice = ""
+var userEndPrice = ""
+
 
 @main
 struct STEMatchApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

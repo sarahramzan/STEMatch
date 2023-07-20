@@ -10,6 +10,11 @@ import SwiftUI
 struct ReviewPage: View {
     @State var opportunity = "Select opportunity"
     @State var star1Filled  = false
+    @State var star1 = "star"
+    @State var star2 = "star"
+    @State var star3 = "star"
+    @State var star4 = "star"
+    @State var star5 = "star"
     
     var body: some View {
         NavigationStack{
@@ -69,35 +74,63 @@ struct ReviewPage: View {
                     
                     HStack {
                         Button {
-                            star1Filled = true
+//                            star1Filled = true
+                            star1 = "star.fill"
                             
                         } label: {
-                            Image(systemName: "star")
+                            Image(systemName: star1)
                                 .foregroundColor(Color.white)
                         }
                         Button {
-                            
+                            star1 = "star.fill"
+                            star2 = "star.fill"
                         } label: {
-                            Image(systemName: "star")
+                            Image(systemName: star2)
                                 .foregroundColor(Color.white)
                         }
                         Button {
-                            
+                            star1 = "star.fill"
+                            star2 = "star.fill"
+                            star3 = "star.fill"
                         } label: {
-                            Image(systemName: "star")
+                            Image(systemName: star3)
                                 .foregroundColor(Color.white)
                         }
                         Button {
-                            
+                            star1 = "star.fill"
+                            star2 = "star.fill"
+                            star3 = "star.fill"
+                            star4 = "star.fill"
                         } label: {
-                            Image(systemName: "star")
+                            Image(systemName: star4)
                                 .foregroundColor(Color.white)
                         }
                         Button {
-                            
+                            star1 = "star.fill"
+                            star2 = "star.fill"
+                            star3 = "star.fill"
+                            star4 = "star.fill"
+                            star5 = "star.fill"
                         } label: {
-                            Image(systemName: "star")
+                            Image(systemName: star5)
                                 .foregroundColor(Color.white)
+                        }
+                        Spacer()
+                            .frame(width: 50.0)
+                            
+                        Button {
+                            star1 = "star"
+                            star2 = "star"
+                            star3 = "star"
+                            star4 = "star"
+                            star5 = "star"
+                        } label: {
+                            
+
+                            Text("X")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color("beige"))
                         }
                         
                     }

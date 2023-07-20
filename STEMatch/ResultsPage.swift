@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ResultsPage: View {
+    var programList: [Program] = []
+    
+    //KWK
+    var KWKInPerson = Program(name: "Kode With Klossy In Person", location: [ "Chicago", "Los Angeles", "Miami", "NYC", "Seattle"], startAge: "13", endAge: "18", price: "0", subject: ["technology"])
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Results")
+        
     }
+    
 }
 
 struct ResultsPage_Previews: PreviewProvider {
