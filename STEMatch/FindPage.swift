@@ -16,6 +16,8 @@ struct FindPage: View {
     @State var location = "Select Location"
    
     @State var userAgeTemp = ""
+    @State var startPrice = ""
+    @State var endPrice = ""
 //    var userSubjects: [String] = []
 //    var userStartPrice = 0
 //    var userEndPrice = 0
@@ -185,7 +187,7 @@ struct FindPage: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                     HStack {
-                        TextField("     $", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        TextField("     $", text: $startPrice)
                             .frame(width: 50.0)
                             .frame(height: 40.0)
                             .foregroundColor(Color.black)
@@ -198,7 +200,7 @@ struct FindPage: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("beige"))
                         
-                        TextField("  $$$", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        TextField("  $$$", text: $endPrice)
                             .frame(width: 50.0)
                             .frame(height: 40.0)
                             .foregroundColor(Color.black)
@@ -210,7 +212,7 @@ struct FindPage: View {
                         .frame(height: 55.0)
                     
 //                    NavigationButton(destination: NextView(mhzValue: self.$mhzValue)){...}
-                    NavigationLink(destination: ResultsPage()) {
+                    NavigationLink(destination: ResultsPage(ageOfUser: $userAgeTemp, sPrice: $startPrice, ePrice: $endPrice)) {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
                                     .frame(width: 200.0, height: 60.0)

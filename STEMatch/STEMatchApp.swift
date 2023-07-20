@@ -8,10 +8,8 @@
 import SwiftUI
 
 var userLocation = ""
-var userAge = ""
+
 var userSubjects: [String] = []
-var userStartPrice = ""
-var userEndPrice = ""
 
 
 @main
