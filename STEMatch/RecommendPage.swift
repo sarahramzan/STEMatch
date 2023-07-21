@@ -13,6 +13,13 @@ var artsCount = true
 var mathCount = true
 struct RecommendPage: View {
     @State var subjectsSelected = ""
+    @State var orgName = ""
+    @State var oppName = ""
+    @State var locs = ""
+    @State var sAge = ""
+    @State var eAge = ""
+    @State var sPrice = ""
+    @State var ePrice = ""
     var body: some View {
         NavigationStack{
             ZStack{
@@ -43,7 +50,7 @@ struct RecommendPage: View {
                             Spacer()
                                 .frame(height: 45.0)
                             
-                            TextField("Organization Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("Organization Name", text: $orgName)
                                 .frame(width: 250.0, height: 50.0)
                             
                                 .padding(.horizontal)
@@ -53,7 +60,7 @@ struct RecommendPage: View {
                                 .frame(height: 30.0)
                             // To be filled in as a drop down
                             
-                            TextField("Opportunity Name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("Opportunity Name", text: $oppName)
                                 .frame(width: 250.0, height: 50.0)
                             
                                 .padding(.horizontal)
@@ -62,7 +69,7 @@ struct RecommendPage: View {
                             Spacer()
                                 .frame(height: 30.0)
                             
-                            TextField("Location(s)", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("Location(s)", text: $locs)
                                 .frame(width: 250.0, height: 50.0)
                             
                                 .padding(.horizontal)
@@ -77,7 +84,7 @@ struct RecommendPage: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
                             HStack {
-                                TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                TextField("  AGE", text: $sAge)
                                     .frame(width: 50.0)
                                     .frame(height: 40.0)
                                     .foregroundColor(Color.black)
@@ -91,7 +98,7 @@ struct RecommendPage: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(Color("beige"))
                                 
-                                TextField("  AGE", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                                TextField("  AGE", text: $eAge)
                                     .frame(width: 50.0)
                                     .frame(height: 40.0)
                                     .foregroundColor(Color.black)
@@ -166,7 +173,7 @@ struct RecommendPage: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
                         HStack {
-                            TextField("     $", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("     $", text: $sPrice)
                                 .frame(width: 50.0)
                                 .frame(height: 40.0)
                                 .foregroundColor(Color.black)
@@ -179,7 +186,7 @@ struct RecommendPage: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("beige"))
                             
-                            TextField("  $$$", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                            TextField("  $$$", text: $ePrice)
                                 .frame(width: 50.0)
                                 .frame(height: 40.0)
                                 .foregroundColor(Color.black)

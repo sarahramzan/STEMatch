@@ -16,6 +16,8 @@ struct ReviewPage: View {
     @State var star4 = "star"
     @State var star5 = "star"
     
+    @State var rev = ""
+    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -73,14 +75,15 @@ struct ReviewPage: View {
                         .frame(height: 20.0)
                     
                     HStack {
+                        
                         Button {
-//                            star1Filled = true
                             star1 = "star.fill"
                             
                         } label: {
                             Image(systemName: star1)
                                 .foregroundColor(Color.white)
                         }
+                        
                         Button {
                             star1 = "star.fill"
                             star2 = "star.fill"
@@ -139,7 +142,7 @@ struct ReviewPage: View {
                         
                     
                     
-                    TextField("Write review here", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("Write review here", text: $rev)
                         .frame(width: 300.0, height: 300.0)
                     
                         .padding(.horizontal)

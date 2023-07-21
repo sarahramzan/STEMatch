@@ -13,6 +13,7 @@ class Program {
     var endAge = ""
     var price = ""
     var subject: [String] = []
+    var fav = false
     
     init(name: String, location: [String], startAge: String, endAge: String, price: String, subject: [String]){
         self.name = name
